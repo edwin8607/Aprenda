@@ -1,0 +1,33 @@
+<%= form_for(@centro) do |f| %>
+  <% if @centro.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@centro.errors.count, "error") %> prohibited this centro from being saved:</h2>
+
+      <ul>
+      <% @centro.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nombre_centro %><br>
+    <%= f.text_field :nombre_centro %>
+  </div>
+  <div class="field">
+    <%= f.label :ciudad %><br>
+    <%= f.text_field :ciudad %>
+  </div>
+  <div class="field">
+    <%= f.label :codigo %><br>
+    <%= f.text_field :codigo %>
+  </div>
+  <div class="field">
+    <%= f.label :regional_id %><br>
+    <%= f.text_field :regional_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

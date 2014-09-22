@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre_centro: MyString
+  ciudad: MyString
+  codigo: MyString
+  regional_id: 
+
+two:
+  nombre_centro: MyString
+  ciudad: MyString
+  codigo: MyString
+  regional_id: 

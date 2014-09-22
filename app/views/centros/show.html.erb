@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre centro:</strong>
+  <%= @centro.nombre_centro %>
+</p>
+
+<p>
+  <strong>Ciudad:</strong>
+  <%= @centro.ciudad %>
+</p>
+
+<p>
+  <strong>Codigo:</strong>
+  <%= @centro.codigo %>
+</p>
+
+<p>
+  <strong>Regional:</strong>
+  <%= @centro.regional %>
+</p>
+
+<%= link_to 'Edit', edit_centro_path(@centro) %> |
+<%= link_to 'Back', centros_path %>

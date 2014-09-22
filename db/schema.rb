@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140922232915) do
+ActiveRecord::Schema.define(version: 20140922234048) do
+
+  create_table "centros", force: true do |t|
+    t.string   "nombre_centro"
+    t.string   "ciudad"
+    t.string   "codigo"
+    t.integer  "regional_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "centros", ["regional_id"], name: "index_centros_on_regional_id"
 
   create_table "regionals", force: true do |t|
     t.string   "departamento"
