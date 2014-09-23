@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140923011241) do
+ActiveRecord::Schema.define(version: 20140923012147) do
 
   create_table "aprendizs", force: true do |t|
     t.string   "nombres"
@@ -36,6 +36,12 @@ ActiveRecord::Schema.define(version: 20140923011241) do
   end
 
   add_index "centros", ["regional_id"], name: "index_centros_on_regional_id"
+
+  create_table "equipos", force: true do |t|
+    t.string   "nombre_equipo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "fichas", force: true do |t|
     t.string   "numeroficha"
