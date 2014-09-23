@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140922235410) do
+ActiveRecord::Schema.define(version: 20140923000611) do
+
+  create_table "aprendizs", force: true do |t|
+    t.string   "nombres"
+    t.string   "apellido"
+    t.boolean  "genero"
+    t.string   "identificacion"
+    t.string   "email"
+    t.integer  "ficha_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "aprendizs", ["ficha_id"], name: "index_aprendizs_on_ficha_id"
 
   create_table "centros", force: true do |t|
     t.string   "nombre_centro"
