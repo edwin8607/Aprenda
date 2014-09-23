@@ -1,0 +1,1 @@
+rails g scaffold instructor nombre:string apellidos:string genero:boolean identificacion:string email:string titulo:string centro:references
