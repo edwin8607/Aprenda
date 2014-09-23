@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :equipo_aprendizs
+
   resources :equipos
 
   resources :instructors
