@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :solucions
+
   resources :questionarios
 
   resources :temas

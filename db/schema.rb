@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140930043211) do
+ActiveRecord::Schema.define(version: 20140930044850) do
 
   create_table "aprendizs", force: true do |t|
     t.string   "nombres"
@@ -99,6 +99,15 @@ ActiveRecord::Schema.define(version: 20140930043211) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "solucions", force: true do |t|
+    t.string   "respuesta"
+    t.integer  "questionario_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "solucions", ["questionario_id"], name: "index_solucions_on_questionario_id"
 
   create_table "temas", force: true do |t|
     t.string   "nombre_tema"
