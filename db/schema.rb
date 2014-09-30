@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140923012710) do
+ActiveRecord::Schema.define(version: 20140930043211) do
 
   create_table "aprendizs", force: true do |t|
     t.string   "nombres"
@@ -85,10 +85,28 @@ ActiveRecord::Schema.define(version: 20140923012710) do
 
   add_index "programas", ["centro_id"], name: "index_programas_on_centro_id"
 
+  create_table "questionarios", force: true do |t|
+    t.string   "pregunta"
+    t.integer  "tema_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "questionarios", ["tema_id"], name: "index_questionarios_on_tema_id"
+
   create_table "regionals", force: true do |t|
     t.string   "departamento"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "temas", force: true do |t|
+    t.string   "nombre_tema"
+    t.integer  "programa_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "temas", ["programa_id"], name: "index_temas_on_programa_id"
 
 end

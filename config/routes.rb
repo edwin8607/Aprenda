@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :questionarios
+
+  resources :temas
+
   get 'static_pages/home'
 
   get 'static_pages/help'

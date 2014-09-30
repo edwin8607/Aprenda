@@ -1,0 +1,27 @@
+<h1>Listing questionarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pregunta</th>
+      <th>Tema</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @questionarios.each do |questionario| %>
+      <tr>
+        <td><%= questionario.pregunta %></td>
+        <td><%= questionario.tema %></td>
+        <td><%= link_to 'Show', questionario %></td>
+        <td><%= link_to 'Edit', edit_questionario_path(questionario) %></td>
+        <td><%= link_to 'Destroy', questionario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Questionario', new_questionario_path %>
