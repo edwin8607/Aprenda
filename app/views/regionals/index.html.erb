@@ -1,6 +1,7 @@
-<h1>Listing regionals</h1>
+<%- model_class = Regional -%>
 
-<table>
+
+<table class ="table table-striped">
   <thead>
     <tr>
       <th>Departamento</th>
@@ -12,9 +13,8 @@
     <% @regionals.each do |regional| %>
       <tr>
         <td><%= regional.departamento %></td>
-        <td><%= link_to 'Show', regional %></td>
-        <td><%= link_to 'Edit', edit_regional_path(regional) %></td>
-        <td><%= link_to 'Destroy', regional, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+       
       </tr>
     <% end %>
   </tbody>
