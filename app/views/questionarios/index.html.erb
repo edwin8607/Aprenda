@@ -1,6 +1,6 @@
-<h1>Listing questionarios</h1>
+<h1>Lista questionarios</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Pregunta</th>
@@ -14,9 +14,9 @@
       <tr>
         <td><%= questionario.pregunta %></td>
         <td><%= questionario.tema %></td>
-        <td><%= link_to 'Show', questionario %></td>
-        <td><%= link_to 'Edit', edit_questionario_path(questionario) %></td>
-        <td><%= link_to 'Destroy', questionario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', questionario %></td>
+        <td><%= link_to 'Editar', edit_questionario_path(questionario) %></td>
+        <td><%= link_to 'Eliminar', questionario, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Questionario', new_questionario_path %>
+<%= link_to 'Nuevo Questionario', new_questionario_path %>

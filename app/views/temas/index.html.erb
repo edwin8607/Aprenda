@@ -1,6 +1,6 @@
-<h1>Listing temas</h1>
+<h1>Lista temas</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Nombre tema</th>
@@ -14,9 +14,9 @@
       <tr>
         <td><%= tema.nombre_tema %></td>
         <td><%= tema.programa %></td>
-        <td><%= link_to 'Show', tema %></td>
-        <td><%= link_to 'Edit', edit_tema_path(tema) %></td>
-        <td><%= link_to 'Destroy', tema, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', tema %></td>
+        <td><%= link_to 'Editar', edit_tema_path(tema) %></td>
+        <td><%= link_to 'Eliminar', tema, method: :delete, data: { confirm: 'esta seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Tema', new_tema_path %>
+<%= link_to 'Nuevo Tema', new_tema_path %>

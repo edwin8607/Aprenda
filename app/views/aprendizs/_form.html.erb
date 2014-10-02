@@ -19,10 +19,13 @@
     <%= f.label :apellido %><br>
     <%= f.text_field :apellido %>
   </div>
+ 
   <div class="field">
-    <%= f.label :genero %><br>
-    <%= f.check_box :genero %>
+   Masculino: <%= f.radio_button(:genero, true) %>
+   Femenino: <%= f.radio_button(:genero, false) %>
   </div>
+
+
   <div class="field">
     <%= f.label :identificacion %><br>
     <%= f.text_field :identificacion %>
@@ -36,6 +39,6 @@
     <%= f.text_field :ficha_id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Guardar"%>
   </div>
 <% end %>

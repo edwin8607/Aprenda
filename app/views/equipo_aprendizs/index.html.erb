@@ -1,6 +1,6 @@
-<h1>Listing equipo_aprendizs</h1>
+<h1>Lista equipo_aprendizs</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Equipo</th>
@@ -14,9 +14,9 @@
       <tr>
         <td><%= equipo_aprendiz.equipo %></td>
         <td><%= equipo_aprendiz.aprendiz %></td>
-        <td><%= link_to 'Show', equipo_aprendiz %></td>
-        <td><%= link_to 'Edit', edit_equipo_aprendiz_path(equipo_aprendiz) %></td>
-        <td><%= link_to 'Destroy', equipo_aprendiz, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', equipo_aprendiz %></td>
+        <td><%= link_to 'Editar', edit_equipo_aprendiz_path(equipo_aprendiz) %></td>
+        <td><%= link_to 'Eliminar', equipo_aprendiz, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>

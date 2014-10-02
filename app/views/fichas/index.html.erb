@@ -1,6 +1,6 @@
 <h1>Listing fichas</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Numeroficha</th>
@@ -14,9 +14,9 @@
       <tr>
         <td><%= ficha.numeroficha %></td>
         <td><%= ficha.programa %></td>
-        <td><%= link_to 'Show', ficha %></td>
-        <td><%= link_to 'Edit', edit_ficha_path(ficha) %></td>
-        <td><%= link_to 'Destroy', ficha, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', ficha %></td>
+        <td><%= link_to 'Editar', edit_ficha_path(ficha) %></td>
+        <td><%= link_to 'Eliminar', ficha, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Ficha', new_ficha_path %>
+<%= link_to 'Nuevo Ficha', new_ficha_path %>

@@ -1,6 +1,6 @@
-<h1>Listing equipos</h1>
+<h1>Lista equipos</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Nombre equipo</th>
@@ -12,9 +12,9 @@
     <% @equipos.each do |equipo| %>
       <tr>
         <td><%= equipo.nombre_equipo %></td>
-        <td><%= link_to 'Show', equipo %></td>
-        <td><%= link_to 'Edit', edit_equipo_path(equipo) %></td>
-        <td><%= link_to 'Destroy', equipo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', equipo %></td>
+        <td><%= link_to 'Editar', edit_equipo_path(equipo) %></td>
+        <td><%= link_to 'Eliminar', equipo, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +22,4 @@
 
 <br>
 
-<%= link_to 'New Equipo', new_equipo_path %>
+<%= link_to 'Nuevo Equipo', new_equipo_path %>

@@ -1,6 +1,6 @@
-<h1>Listing solucions</h1>
+<h1>Lista solucions</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Respuesta</th>
@@ -14,9 +14,9 @@
       <tr>
         <td><%= solucion.respuesta %></td>
         <td><%= solucion.questionario %></td>
-        <td><%= link_to 'Show', solucion %></td>
-        <td><%= link_to 'Edit', edit_solucion_path(solucion) %></td>
-        <td><%= link_to 'Destroy', solucion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', solucion %></td>
+        <td><%= link_to 'Editar', edit_solucion_path(solucion) %></td>
+        <td><%= link_to 'Eliminar', solucion, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +24,4 @@
 
 <br>
 
-<%= link_to 'New Solucion', new_solucion_path %>
+<%= link_to 'Nueva Solucion', new_solucion_path %>

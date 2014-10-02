@@ -1,6 +1,6 @@
-<h1>Listing centros</h1>
+<h1>Lista centros</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Nombre centro</th>
@@ -18,9 +18,9 @@
         <td><%= centro.ciudad %></td>
         <td><%= centro.codigo %></td>
         <td><%= centro.regional %></td>
-        <td><%= link_to 'Show', centro %></td>
-        <td><%= link_to 'Edit', edit_centro_path(centro) %></td>
-        <td><%= link_to 'Destroy', centro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', centro %></td>
+        <td><%= link_to 'Editar', edit_centro_path(centro) %></td>
+        <td><%= link_to 'Eliminar', centro, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Centro', new_centro_path %>
+<%= link_to 'Nuevo Centro', new_centro_path %>

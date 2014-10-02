@@ -1,6 +1,6 @@
-<h1>Listing instructors</h1>
+<h1>Lista instructors</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -24,9 +24,9 @@
         <td><%= instructor.email %></td>
         <td><%= instructor.titulo %></td>
         <td><%= instructor.centro %></td>
-        <td><%= link_to 'Show', instructor %></td>
-        <td><%= link_to 'Edit', edit_instructor_path(instructor) %></td>
-        <td><%= link_to 'Destroy', instructor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Mostrar', instructor %></td>
+        <td><%= link_to 'Editar', edit_instructor_path(instructor) %></td>
+        <td><%= link_to 'Eliminar', instructor, method: :delete, data: { confirm: 'Esta seguro?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Instructor', new_instructor_path %>
+<%= link_to 'Nuevo Instructor', new_instructor_path %>
